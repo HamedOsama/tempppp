@@ -191,6 +191,13 @@
   content: none;
 }
 
+@media(max-width:768px) {
+  .login-btn:hover {
+    transform: scale(1) !important;
+    display: inline !important;
+  }
+}
+
 .hidden {
   display: none;
   pointer-events: none;
