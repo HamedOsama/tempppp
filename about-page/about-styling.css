@@ -1,0 +1,110 @@
+:root {
+  --primary: #3b82f6;
+  --secondary: #64748b;
+  --main-color-darker: #2f4156;
+  --main-color: #94c784;
+  --main-color-light: #c8d9e6;
+  --main-color-toolight: #c4c5c7;
+}
+
+* {
+  transition: background-color 0.3s, color 0.3s;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--main-color-light);
+  color: var(--main-color-darker);
+}
+
+.navbar {
+  background-color: var(--main-color-darker);
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  gap: 40px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.hero {
+  background: url('images/about-hero.jpg') center/cover no-repeat;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 20px;
+  color: var(--main-color-darker);
+}
+
+.mission {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.mission h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.mission p {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: var(--main-color-darker);
+}
+
+.mission-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: var(--main-color-darker);
+  padding: 30px;
+  border-radius: 12px;
+  width: 250px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card i {
+  font-size: 36px;
+  color: var(--main-color-light);
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.card p {
+  font-size: 15px;
+  color: var(--main-color-light);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--main-color-darker);
+  margin-top: 60px;
+}

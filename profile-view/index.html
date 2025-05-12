@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>View Profile</title>
+    <link rel="stylesheet" href="./profileview.css" />
+    <link rel="stylesheet" href="../general/navbar.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <ul class="nav-links">
+        <li class="side-bar-container">
+          <i
+            class="fas fa-bars toggle-menu-icon"
+            onclick="openMobileSideBar()"
+          ></i>
+          <div class="mobile-side-bar">
+            <div class="close-btn" onclick="closeMobileSideBar()">
+              <i class="fas fa-times"></i>
+            </div>
+            <ul>
+              <li class="mobile-side-bar-link"><a href="#">Home</a></li>
+              <li class="mobile-side-bar-link"><a href="#">Cars</a></li>
+              <li class="mobile-side-bar-link"><a href="#">About</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <button
+            class="profile-btn"
+            onclick="window.location.href='./profileview.html'"
+          >
+            <i class="fa-solid fa-circle-user profile-icon"></i>
+          </button>
+        </li>
+        <li class="car">
+          <a href="#" onclick="toggleDropdown()">Cars</a>
+          <ul class="dropdown" id="carDropdown">
+            <li><a href="#">Ford</a></li>
+            <li><a href="#">Ferrari</a></li>
+            <li><a href="#">Porsche</a></li>
+          </ul>
+        </li>
+        <li class="about"><a href="#">About</a></li>
+        <li class="logo">Carify</li>
+        <li><a href="#" class="news">News</a></li>
+        <li><a href="#" class="media">Media</a></li>
+        <li><i class="fa-solid fa-magnifying-glass search-icon"></i></li>
+      </ul>
+    </header>
+
+    <div class="profile-page">
+      <h1 id="profileName">Loading...</h1>
+      <div id="profileUsername" class="subtext">@username</div>
+
+      <div class="avatar-container">
+        <div class="avatar" id="avatarDisplay"></div>
+      </div>
+
+      <div>
+        <h3>About</h3>
+        <p id="profileAbout">Nothing added yet.</p>
+      </div>
+    </div>
+
+    <script src="./shared.js"></script>
+    <script src="../general/navbar.js"></script>
+  </body>
+</html>

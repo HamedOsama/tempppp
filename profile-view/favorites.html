@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Car Listing</title>
+  <link rel="stylesheet" href="./profileview.css" />
+  <link rel="stylesheet" href="../general/navbar.css" />
+  <link rel="stylesheet" href="https://unpkg.com/remixicon/fonts/remixicon.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="profileview.html"><img src="assets/profile-icon.png" alt="Profile" /></a></li>
+      <li><a href="#">Cars</a></li>
+      <li><a href="#">About</a></li>
+      <li class="logo">Carify</li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">Media</a></li>
+      <li><img src="assets/search-icon.png" class="search-icon" alt="Search" /></li>
+    </ul>
+  </nav>
+
+  <div style="text-align:center; margin-top:2rem;">
+    <button id="toggle-favorites">Toggle Favorites</button>
+  </div>
+
+  <div class="grid-view" id="car-list"></div>
+
+  <div class="favorites-container" id="favorites-container" style="display: none;">
+    <h2>Your Favorite Cars</h2>
+    <div id="no-favorites">
+      <img src="https://via.placeholder.com/150" alt="No favorites" />
+      <p>No favorite cars added yet.</p>
+    </div>
+  </div>
+
+  <script src="./shared.js"></script>
+  <script src="../general/navbar.js"></script>
+</body>
+</html>
+

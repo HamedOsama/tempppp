@@ -1,0 +1,208 @@
+:root {
+  --main-color-darker: #2f4156;
+  --main-color: #94c784;
+  --main-color-light: #c8d9e6;
+  --main-color-toolight: #fbfdff;
+}
+/* Reset & basic layout */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+h1, h2, h3 {
+  margin: 1rem 0 0.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #000;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links img {
+  height: 32px;
+  width: 32px;
+  object-fit: contain;
+}
+
+.nav-links .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Grid for car cards */
+.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+/* Car card styles */
+.car-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.car-card:hover {
+  transform: translateY(-5px);
+}
+
+.car-image {
+  position: relative;
+  height: 180px;
+  background-color: #ddd;
+}
+
+.car-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.favorite-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  border: none;
+  padding: 0.4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.favorite-button.active {
+  background-color: red;
+  color: white;
+}
+
+.car-details {
+  padding: 1rem;
+}
+
+.car-meta {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.car-price span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Profile page */
+.profile-page {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.profile-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.profile-page input,
+.profile-page textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.profile-page label {
+  font-weight: bold;
+}
+
+.save-btn,
+.change-btn {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  align-self: start;
+}
+
+.save-btn:hover,
+.change-btn:hover {
+  background-color: #222;
+}
+
+.avatar-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  background-color: #ddd;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  line-height: 80px;
+  font-size: 2rem;
+  color: white;
+}
+
+/* Favorites */
+.favorites-container {
+  padding: 2rem;
+  background: white;
+  margin: 2rem;
+  border-radius: 10px;
+}
+
+.favorites-container h2 {
+  margin-top: 0;
+}
+
+#no-favorites {
+  text-align: center;
+  margin-top: 1rem;
+  color: gray;
+}
+
+#no-favorites img {
+  width: 150px;
+  margin-bottom: 1rem;
+}
+
+

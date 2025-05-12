@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Edit Profile</title>
+  <link rel="stylesheet" href="./profileview.css" />
+  <link rel="stylesheet" href="../general/navbar.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="profileview.html"><img src="assets/profile-icon.png" alt="Profile" /></a></li>
+      <li><a href="index.html">Cars</a></li>
+      <li><a href="#">About</a></li>
+      <li class="logo">Carify</li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">Media</a></li>
+      <li><img src="assets/search-icon.png" class="search-icon" alt="Search" /></li>
+    </ul>
+  </nav>
+
+  <div class="profile-page">
+    <h1>Edit profile</h1>
+    <div class="subtext">
+      Information you add here is visible to anyone who can view your profile.
+    </div>
+
+    <form>
+      <label>Photo</label>
+      <div class="avatar-container">
+        <div class="avatar" id="avatarPreview"> </div>
+        <button type="button" class="change-btn" id="changePhotoBtn">Change</button>
+        <input type="file" id="imageUpload" accept="image/*" style="display: none;" />
+      </div>
+
+      <label for="firstNameInput">First name</label>
+      <input type="text" id="firstNameInput" />
+
+      <label for="surnameInput">Surname</label>
+      <input type="text" id="surnameInput" />
+
+      <label for="aboutInput">About</label>
+      <textarea id="aboutInput"></textarea>
+
+      <label for="usernameInput">Username</label>
+      <input type="text" id="usernameInput" />
+
+      <button type="button" class="save-btn" id="saveChanges">Save</button>
+    </form>
+  </div>
+
+  <script src="./shared.js"></script>
+</body>
+</html>
+

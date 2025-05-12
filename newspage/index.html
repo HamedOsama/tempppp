@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carify News</title>
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../general/all.min.css" />
+    <link rel="stylesheet" href="../general/normalize.css" />
+    <link rel="stylesheet" href="./news.css" />
+    <link rel="stylesheet" href="../general/navbar.css" />
+</head>
+<body>
+  <header class="navbar">
+      <ul class="nav-links">
+        <li class="side-bar-container">
+          <i class="fas fa-bars toggle-menu-icon" onclick="openMobileSideBar()"></i>
+          <div class="mobile-side-bar">
+            <div class="close-btn" onclick="closeMobileSideBar()">
+              <i class="fas fa-times"></i>
+            </div>
+            <ul>
+              <li class="mobile-side-bar-link"><a href="#">Home</a></li>
+              <li class="mobile-side-bar-link"><a href="#">Cars</a></li>
+              <li class="mobile-side-bar-link"><a href="#">About</a></li>
+            </ul>
+          </div>
+        </li>
+       <li>
+       <button class="profile-btn" onclick="window.location.href='./profileview.html'">
+          <i class="fa-solid fa-circle-user profile-icon"></i>
+       </button>
+</li>
+        <li class="car">
+          <a href="#" onclick="toggleDropdown()">Cars</a>
+          <ul class="dropdown" id="carDropdown">
+            <li><a href="#">Ford</a></li>
+            <li><a href="#">Ferrari</a></li>
+            <li><a href="#">Porsche</a></li>
+          </ul>
+        </li>
+        <li class="about"><a href="#">About</a></li>
+        <li class="logo"><a class="logo-btn" href="../home-page/HomaPage.html">Carify</a></li>
+        <li><a href="./index.html" class="news">News</a></li>
+        <li><a href="#" class="media">Media</a></li>
+        <li><i class="fa-solid fa-magnifying-glass search-icon"></i></li>
+      </ul>
+    </header>
+
+  <section class="hero">
+    <h1>Latest Car News & Updates</h1>
+    <p>Catch up on the latest industry news, car releases, and automotive trends.</p>
+  </section>
+
+  <section class="news-grid">
+    <article class="news-card">
+      <img src="./images/pngwing.com (1).png" alt="Electric Car" />
+      <h3>Electric Cars: The Future is Now</h3>
+      <p>New breakthroughs in EV range and charging times make electric cars more appealing than ever.</p>
+      <a href="#">Read More</a>
+    </article>
+
+    <article class="news-card">
+      <img src="./images/pngwing.com (2).png" alt="SUV Launch" />
+      <h3>2025 SUV Models Revealed</h3>
+      <p>Top brands unveil their latest SUV models with enhanced tech and design.</p>
+      <a href="#">Read More</a>
+    </article>
+
+    <article class="news-card">
+      <img src="./images/pngwing.com.png" alt="Autonomous Driving" />
+      <h3>Self-Driving Tech: Where We Stand</h3>
+      <p>Here's what 2025 looks like for autonomous driving across major car manufacturers.</p>
+      <a href="#">Read More</a>
+    </article>
+  </section>
+  <script src="../general/navbar.js"></script>
+
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.4475449842553!2d31.34564922461683!3d29.851364375021365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145836f34a58de69%3A0x49853855f032462a!2z2KzYp9mF2LnYqSDYrdmE2YjYp9mG!5e0!3m2!1sar!2seg!4v1747013498772!5m2!1sar!2seg" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</body>
+</html>

@@ -1,0 +1,138 @@
+/* Hero slider styles */
+
+.slider-container {
+    width: 100%;
+    height: 50%;
+    top: 50%;
+    position: absolute;
+    overflow: hidden;
+    /* This is important to hide slides outside the viewport */
+}
+
+.slider-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 2s cubic-bezier(0.80, -0.4, 0.65, 1);
+    position: relative;
+    /* Changed from absolute to relative */
+    z-index: 3;
+    /* Higher z-index to be above the road line */
+}
+
+.slide {
+    flex: 0 0 100%;
+    /* Takes full width, doesn't grow or shrink */
+    height: 100%;
+    width: 100%;
+    position: relative;
+    /* Changed from absolute to relative */
+    /* background-color: #B2D4E6; Gulf light blue */
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+    /* Increased z-index to position above the line */
+}
+
+.car-image {
+    max-width: 45%;
+    max-height: 60%;
+    object-fit: contain;
+    position: relative;
+    z-index: 3;
+    /* Increased z-index to position above the line */
+    transform: rotate(180deg);
+}
+
+.road-line {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: #F7691F;
+    /* Gulf orange */
+    pointer-events: none;
+    cursor: none;
+    z-index: 1;
+    /* Lower z-index to position below the car */
+}
+
+/* Slider controls */
+.slider-controls {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 5;
+}
+
+.prev-btn,
+.next-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    background-color: rgba(255, 102, 0, 0.8);
+    /* Gulf orange with transparency */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prev-btn svg,
+.next-btn svg {
+    width: 70%;
+    height: 70%;
+    fill: white;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    opacity: 1;
+    background-color: rgba(255, 102, 0, 1);
+}
+
+.about-us-section {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .slider-container {
+        height: 60%;
+        top: 40%;
+    }
+
+    .road-line {
+        height: 64px;
+    }
+
+    .car-image {
+        max-width: 70%;
+    }
+
+    .slider-controls {
+        padding: 0 8px;
+    }
+
+    .prev-btn,
+    .next-btn {
+        width: 32px;
+        height: 32px;
+    }
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>omar</title>
+    <link rel="stylsheet" href="../general/all.min.css" />
+    <link rel="stylsheet" href="../general/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./home-page/style.css" />
+    <link rel="stylesheet" href="./general/navbar.css" />
+    <link rel="stylesheet" href="./home-page/hero-slider.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <ul class="nav-links">
+        <li class="side-bar-container">
+          <i
+            class="fas fa-bars toggle-menu-icon"
+            onclick="openMobileSideBar()"
+          ></i>
+          <div class="mobile-side-bar">
+            <div class="close-btn" onclick="closeMobileSideBar()">
+              <i class="fas fa-times"></i>
+            </div>
+            <ul>
+              <li class="mobile-side-bar-link"><a href="#">Home</a></li>
+              <li class="mobile-side-bar-link"><a href="#">Cars</a></li>
+              <li class="mobile-side-bar-link"><a href="#">About</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <button
+            class="profile-btn"
+            onclick="window.location.href='./profile-view/index.html'"
+          >
+            <i class="fa-solid fa-circle-user profile-icon"></i>
+          </button>
+        </li>
+        <li class="car">
+          <a href="#" onclick="toggleDropdown()">Cars</a>
+          <ul class="dropdown" id="carDropdown">
+            <li><a href="/result-page/index.html?search=Ford">Ford</a></li>
+            <li><a href="/result-page/index.html?search=Ferrari">Ferrari</a></li>
+            <li><a href="/result-page/index.html?search=Porsche">Porsche</a></li>
+            <li><a href="/result-page/index.html?search=BMW">BMW</a></li>
+          </ul>
+        </li>
+        <li class="about">
+          <a href="./about-page/index.html">About</a>
+        </li>
+        <li class="logo">
+          <a class="logo-btn" href="./index.html">Carify</a>
+        </li>
+        <li><a href="./newspage/index.html" class="news">News</a></li>
+        <li><a href="#" class="media">Media</a></li>
+        <li><a href="./auth/index.html" class="login-btn">Login</a></li>
+      </ul>
+    </header>
+
+    <div class="main-area">
+      <div class="slider-container">
+        <div class="slider-track">
+          <!-- Slides will be dynamically populated -->
+        </div>
+        <div class="road-line"></div>
+        <div class="slider-controls">
+          <button class="next-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="48"
+              height="48"
+            >
+              <path fill="none" d="M0 0h24v24H0z" />
+              <path
+                d="M15.7 4.3a1 1 0 0 1 0 1.4L9.4 12l6.3 6.3a1 1 0 0 1-1.4 1.4l-7-7a1 1 0 0 1 0-1.4l7-7a1 1 0 0 1 1.4 0z"
+              />
+            </svg>
+          </button>
+          <button class="prev-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="48"
+              height="48"
+            >
+              <path fill="none" d="M0 0h24v24H0z" />
+              <path
+                d="M8.3 4.3a1 1 0 0 0 0 1.4L14.6 12l-6.3 6.3a1 1 0 0 0 1.4 1.4l7-7a1 1 0 0 0 0-1.4l-7-7a1 1 0 0 0-1.4 0z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="content">
+        <div class="group">
+          <div class="hero-text">
+            <h1>Find Your Dream Car</h1>
+            <p>Search from a variety of car types, brands, and price ranges</p>
+          </div>
+          <form id="search-form" action="/result-page/index.html" method="get">
+            <div class="search-container">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
+                <g>
+                  <path
+                    d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
+                  ></path>
+                </g>
+              </svg>
+
+              <input
+                id="search"
+                class="input"
+                type="search"
+                placeholder="Search..."
+                name="search"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <ul>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Term of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Social Media</h3>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">x</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© NEXT 2020. All rights reserved.</p>
+      </div>
+
+      <!-- Font Awesome for icons -->
+      <div class="footer-icons">
+        <a href="https://www.instagram.com" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="mailto:example@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.x.com" target="_blank"><i class="fab fa-x"></i></a>
+      </div>
+      <div class="footer-text">Contact us &copy; 2025</div>
+    </footer>
+    <script src="./home-page/hero-slider.js"></script>
+    <script src="./general/navbar.js"></script>
+  </body>
+</html>
