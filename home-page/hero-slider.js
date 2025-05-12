@@ -6,32 +6,32 @@ document.addEventListener('DOMContentLoaded', function () {
         slidesData: [
             {
                 id: 1,
-                image: '../images/slider-car-1.png',
+                image: 'images/slider-car-1.png',
                 number: '001'
             },
             {
                 id: 2,
-                image: '../images/slider-car-2.png',
+                image: 'images/slider-car-2.png',
                 number: '002'
             },
             {
                 id: 3,
-                image: '../images/slider-car-3.png',
+                image: 'images/slider-car-3.png',
                 number: '003'
             },
             {
                 id: 4,
-                image: '../images/slider-car-4.png',
+                image: 'images/slider-car-4.png',
                 number: '004'
             },
             {
                 id: 5,
-                image: '../images/slider-car-5.png',
+                image: 'images/slider-car-5.png',
                 number: '005'
             },
             {
                 id: 6,
-                image: '../images/slider-car-6.png',
+                image: 'images/slider-car-6.png',
                 number: '006'
             },
         ]
