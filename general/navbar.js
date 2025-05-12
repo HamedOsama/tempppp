@@ -28,13 +28,13 @@ function closeMobileSideBar() {
 
 
 const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-const profileBtn = document.querySelector('.profile-btn');
-const loginBtn = document.querySelector('.login-btn');
+const profileBtn = document.querySelectorAll('.profile-btn');
+const loginBtn = document.querySelectorAll('.login-btn');
 
 if (currentUser) {
-  profileBtn.classList.remove('hidden');
-  loginBtn.classList.add('hidden');
+  profileBtn.forEach(btn => btn.classList.remove('hidden'));
+  loginBtn.forEach(btn => btn.classList.add('hidden'));
 } else {
-  loginBtn.classList.remove('hidden');
-  profileBtn.classList.add('hidden');
+  loginBtn.forEach(btn => btn.classList.remove('hidden'));
+  profileBtn.forEach(btn => btn.classList.add('hidden'));
 }
